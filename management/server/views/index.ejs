@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>测试页面</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/lib/bootstrap/css/bootstrap.min.css' />
+    <script src="/lib/jquery/jquery-3.1.1.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/javascripts/test.js"></script>
+  </head>
+  <body>
+   <!--  <div role="form">
+      <div class="form-group">
+        <label for="teacher_number">教师工号</label>
+        <input type="text" class="form-control" id="teacher_number" placeholder="请输入教师工号">
+      </div>
+      <div class="form-group">
+        <label for="teacher_name">教师名称</label>
+        <input type="text" class="form-control" id="teacher_name" placeholder="请输入教师名称">
+      </div>
+      <div class="form-group">
+        <label for="password">密码</label>
+        <input type="text" class="form-control" id="password" placeholder="请输入密码">
+      </div>
+      <button class="btn btn-default" id="reg">注册</button>
+    </div> -->
+
+    <!-- <div role="form">
+        <div class="form-group">
+            <label for="teacher_id">教师id</label>
+            <input type="text" class="form-control" id="teacher_id" placeholder="请输入教师id">
+        </div>
+      <div class="form-group">
+        <label for="classes_code">教学班代码</label>
+        <input type="text" class="form-control" id="classes_code" placeholder="请输入教学班代码">
+      </div>
+      <div class="form-group">
+        <label for="classes_name">教学班名称</label>
+        <input type="text" class="form-control" id="classes_name" placeholder="请输入教学班名称">
+      </div>
+      <div class="form-group">
+        <label for="classes_desc">教学班描述</label>
+        <input type="text" class="form-control" id="classes_desc" placeholder="请输入教学班描述">
+      </div>
+      <button class="btn btn-default" id="addClasses">添加教学班</button>
+    </div> -->
+    <form role="form" method="post" action="/classes/getClasses">
+        <div class="form-group">
+            <label for="teacher_id">教师id</label>
+            <input type="text" class="form-control" id="teacher_id" name="teacher_id" placeholder="请输入教师id">
+        </div>
+      <button type="submit" class="btn btn-default">查询所有教学班</button>
+    </form>
+  </body>
+</html>

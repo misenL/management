@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>测试页面</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/lib/bootstrap/css/bootstrap.min.css' />
+    <script src="/lib/jquery/jquery-3.1.1.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/javascripts/test.js"></script>
+  </head>
+  <body>
+        测试页面
+      <%=response.value%>
+      <table class="table">
+            <caption>教学班</caption>
+            <thead>
+              <tr>
+                <th>教学班代码</th>
+                <th>教学班名称</th>
+                <th>教学班任务</th>
+                <th colspan="2">操作</th>
+
+              </tr>
+            </thead>
+            <tbody>
+            <%for(let i = 0; i < response.value.class_list.length; i++){%>
+                <tr>
+                    <td><%=response.value.class_list[i].classes_code%></td>
+                    <td><%=response.value.class_list[i].classes_name%></td>
+                    <td>
+                      <%for(let j = 0; j < response.value.class_list[i].task_list.length; j++){%>
+                        <%=response.value.class_list[i].task_list[j]%>
+                      <%}%>
+                    </td>
+                    <td><input type="text" class="form-control" id="task_name" placeholder="请输入任务名称"></td>
+                    <td><input type="hidden" value="<%=response.value.class_list[i]._id%>" id="classes_id"/><button class="btn btn-default" id="addTask">添加任务</button></td>
+                </tr>
+            <%}%>
+            </tbody>
+          </table>
+  </body>
+</html>
